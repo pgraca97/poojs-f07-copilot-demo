@@ -10,8 +10,12 @@ import {
   bindLinkToLogin,
   bindLinkToRegister,
 } from "../views/auth-view.js";
-import { renderAppScreen, bindLogout, updateAppNav } from "../views/app-view.js";
-import { register, login } from "../services/service.js";
+import {
+  renderAppScreen,
+  bindLogout,
+  updateAppNav,
+} from "../views/app-view.js";
+import { register, login } from "../data/service.js";
 import { navigate } from "../navigate.js";
 
 // Handlers privados de submissão dos formulários.
@@ -37,10 +41,8 @@ const handleLogin = async () => {
   setLoginError("");
   try {
     const result = await login(email, password);
-    if (!result.ok) {
-      setLoginError("Email ou password incorretos.");
-      return;
-    }
+    if (!result.ok) return setLoginError("Email ou password incorretos.");
+
     localStorage.setItem("token", result.token);
     localStorage.setItem("user", JSON.stringify(result.user));
     navigate(result.user.role === "admin" ? "#/admin" : "#/app");
@@ -81,13 +83,20 @@ export const startApp = async (user) => {
   const hash = window.location.hash;
   updateAppNav(user.role, hash);
 
-  if (hash === "#/admin") {
-    const { init } = await import("./admin-controller.js");
+  const routeLoaders = {
+    "#/admin": () => import("./admin-controller.js"),
+    "#/app": () => import("./app-controller.js"),
+  };
+
+  const loadRoute = routeLoaders[hash];
+  if (!loadRoute) {
+    navigate("#/app");
+    const { init } = await import("./app-controller.js");
     await init();
     return;
   }
 
-  const { init } = await import("./app-controller.js");
+  const { init } = await loadRoute();
   await init();
 };
 

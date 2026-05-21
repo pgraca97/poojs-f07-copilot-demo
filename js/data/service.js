@@ -58,3 +58,26 @@ export const deleteTrack = async (id) => {
   });
   return { ok: res.ok };
 };
+
+// Update um track pelo ID. Suporta partial updates
+// Retorna { ok: true } em caso de sucesso, ou lança erro
+export const updateTrack = async (id, data) => {
+  const res = await fetch(`${API}/tracks/${id}`, {
+    method: 'PATCH',
+    headers: authHeaders(),
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error('Failed to update track');
+  return { ok: true };
+};
+
+// Updates a user by Id. Suporta partial updates
+export const updateUser = async (id, data) => {
+  const res = await fetch(`${API}/users/${id}`, {
+    method: 'PATCH',
+    headers: authHeaders(),
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error('Failed to update user');
+  return { ok: true };
+};

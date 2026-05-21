@@ -125,7 +125,11 @@ body {
   border-bottom: 1px solid #2a2a4a;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.app-header #btn-logout {
+  margin-left: auto;
 }
 
 .app-header h1 {
@@ -202,7 +206,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-#add-track-section {
+#add-track-form {
   background: #1e1e2e;
   border: 1px solid #2e2e4e;
   border-radius: 10px;
@@ -214,7 +218,12 @@ body {
   margin-bottom: 2rem;
 }
 
-#add-track-section input {
+#add-track-form h3 {
+  flex: 1 0 100%;
+  margin-bottom: 0.25rem;
+}
+
+#add-track-form input {
   flex: 1 1 160px;
   padding: 0.5rem 0.8rem;
   border: 1px solid #4a4a6a;
@@ -226,15 +235,16 @@ body {
   transition: border-color 0.2s;
 }
 
-#add-track-section input::placeholder {
+#add-track-form input::placeholder {
   color: #606080;
 }
 
-#add-track-section input:focus {
+#add-track-form input:focus {
   border-color: #a78bfa;
 }
 
 #btn-add-track {
+  margin-left: auto;
   padding: 0.5rem 1.1rem;
   border: none;
   border-radius: 6px;
@@ -423,7 +433,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  justify-self: end;
 }
 
 .btn-filter {
@@ -498,11 +507,11 @@ main {
     width: 100%;
   }
 
-  #add-track-section {
+  #add-track-form {
     flex-direction: column;
   }
 
-  #add-track-section input,
+  #add-track-form input,
   #btn-add-track {
     width: 100%;
     flex: none;

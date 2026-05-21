@@ -1,28 +1,16 @@
 {
   "users": [
     {
-      "email": "teste@example.com",
-      "password": "$2a$10$UPJDD1rMJJcngrmE3Mls2.m7ChwVsO1vW8sE5On3ohaQXlXWXiBsm",
-      "role": "user",
+      "email": "teste1@example.com",
+      "password": "$2a$10$8rHRc5pW5gN1kHFv3ahKluSG8NikAtwKelY7keqK0g4HPwD/uUiYu",
+      "role": "admin",
       "id": 1
     },
     {
-      "email": "teste2@gmail.com",
-      "password": "$2a$10$79gTcgp4FU8R93CpzigkF.6j1sL50nDP04KzVGsCZfVeKhOhYkYtK",
+      "email": "teste2@example.com",
+      "password": "$2a$10$RxcnqrqwaqJu0OXJrEYS6uxAm0Nvc6hDB/mt06.qz9eNB/NyRnzqy",
       "role": "user",
       "id": 2
-    },
-    {
-      "email": "teste3@gmail.com",
-      "password": "$2a$10$wq6fSJI6B/zMJ//ABExXheu9HvKk/dNu1CH178LSXb2NC3CJsrVhG",
-      "role": "admin",
-      "id": 3
-    },
-    {
-      "email": "teste1@example.com",
-      "password": "$2a$10$aeMZ6rGryt.t4DyMo2sFO.Hg4V8WZW7dY.nuM.cKtib/kibV1JQYC",
-      "role": "user",
-      "id": 4
     }
   ],
   "tracks": [
@@ -89,46 +77,6 @@
       "duration": 326,
       "genre": "R&B",
       "plays": 4900
-    },
-    {
-      "title": "teste",
-      "artist": "sdifjsdpifj",
-      "genre": "cenas",
-      "duration": 1232,
-      "plays": 0,
-      "id": 11
-    },
-    {
-      "title": "teste",
-      "artist": "sdifjsdpifj",
-      "genre": "cenas",
-      "duration": 1232,
-      "plays": 0,
-      "id": 12
-    },
-    {
-      "title": "sdsdf",
-      "artist": "sdfsdf",
-      "genre": "sdfsdf",
-      "duration": 12312312,
-      "plays": 0,
-      "id": 13
-    },
-    {
-      "title": "sdfsdf",
-      "artist": "sdfdfss",
-      "genre": "sdfsdffsd",
-      "duration": 12312312,
-      "plays": 0,
-      "id": 14
-    },
-    {
-      "title": "111",
-      "artist": "11",
-      "genre": "dwsd",
-      "duration": 12,
-      "plays": 0,
-      "id": 15
     }
   ]
 }

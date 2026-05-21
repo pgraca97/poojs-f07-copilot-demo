@@ -18,22 +18,27 @@ export const renderAppScreen = () => {
     <header class="app-header">
       <h1 id="app-title">SoundBase</h1>
       <nav id="app-nav" class="hidden">
-        <a href="#/app" id="nav-app">Catálogo</a>
-        <a href="#/admin" id="nav-admin">Administração</a>
+        <a href="#/app" id="nav-app">Catalog</a>
+        <a href="#/admin" id="nav-admin">Administration</a>
       </nav>
-      <button id="btn-logout">Sair</button>
+      <button id="btn-logout">Logout</button>
     </header>
 
     <main id="app-main">
       <section id="soundbase-app" class="hidden">
-        <div id="search-controls">
-          <input type="text" id="search-input" placeholder="Search by title or artist…" />
-          <button id="btn-search">Search</button>
+        <div class="toolbar">
+          <div class="toolbar-row toolbar-row-top">
+            <div id="view-controls"></div>
+            <div id="search-controls">
+              <input type="text" id="search-input" placeholder="Search by title or artist…" />
+              <button id="btn-search">Search</button>
+            </div>
+          </div>
+          <div class="toolbar-row toolbar-row-bottom">
+            <div id="filter-controls"></div>
+            <select id="sort-controls"></select>
+          </div>
         </div>
-
-        <div id="filter-controls"></div>
-        <div id="view-controls"></div>
-        <select id="sort-controls"></select>
 
         <div id="catalogue-grid"></div>
         <div id="catalogue-table-container" class="hidden"></div>

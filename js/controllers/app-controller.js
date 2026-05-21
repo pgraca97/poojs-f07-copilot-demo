@@ -1,7 +1,7 @@
 import Track from "../models/Track.js";
 import Playlist from "../models/Playlist.js";
 import { GENRES, VIEWS, SORTS } from "../data/constants.js";
-import { getTracks } from "../services/service.js";
+import { getTracks } from "../data/service.js";
 import {
   showSoundbasePanel,
   renderCards,
@@ -87,7 +87,11 @@ const syncURL = () => {
   // URL absoluta com pathname: uma URL relativa do tipo "#/app" mantém
   // a query antiga; incluir o pathname força o browser a substituir a query
   // por completo, mesmo quando esta passa a ser vazia.
-  history.replaceState(null, "", `${window.location.pathname}${query}${window.location.hash}`);
+  history.replaceState(
+    null,
+    "",
+    `${window.location.pathname}${query}${window.location.hash}`,
+  );
 };
 
 const readURL = () => {

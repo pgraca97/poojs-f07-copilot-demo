@@ -32,9 +32,19 @@ class Router {
     await route.handler();
   }
 
-  // Começa a escutar alterações de hash e trata a rota atual
+  // Começa a escutar alterações de hash e trata a rota atual.
+  // Em hashchange, a query string da rota anterior é limpa antes de despachar
+  // o handler - cada rota é dona do seu próprio espaço de parâmetros. Quem
+  // precisar de query params (app-controller via syncURL) volta a populá-los
+  // depois. A 1.ª corrida é direta (sem strip) para preservar a query num
+  // refresh, p. e. abrir ?genre=Pop&view=table#/app.
   listen() {
-    window.addEventListener("hashchange", () => this.#handleRoute());
+    window.addEventListener("hashchange", () => {
+      if (window.location.search) {
+        history.replaceState(null, "", window.location.pathname + window.location.hash);
+      }
+      this.#handleRoute();
+    });
     this.#handleRoute();
   }
 }
