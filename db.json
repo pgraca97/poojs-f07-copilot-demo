@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "email": "teste@example.com",
+      "password": "$2a$10$UPJDD1rMJJcngrmE3Mls2.m7ChwVsO1vW8sE5On3ohaQXlXWXiBsm",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "email": "teste2@gmail.com",
+      "password": "$2a$10$79gTcgp4FU8R93CpzigkF.6j1sL50nDP04KzVGsCZfVeKhOhYkYtK",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "teste3@gmail.com",
+      "password": "$2a$10$wq6fSJI6B/zMJ//ABExXheu9HvKk/dNu1CH178LSXb2NC3CJsrVhG",
+      "role": "admin",
+      "id": 3
+    },
+    {
+      "email": "teste1@example.com",
+      "password": "$2a$10$aeMZ6rGryt.t4DyMo2sFO.Hg4V8WZW7dY.nuM.cKtib/kibV1JQYC",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "tracks": [
+    {
+      "id": 3,
+      "title": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "duration": 177,
+      "genre": "Hip-Hop",
+      "plays": 12500
+    },
+    {
+      "id": 4,
+      "title": "God's Plan",
+      "artist": "Drake",
+      "duration": 198,
+      "genre": "Hip-Hop",
+      "plays": 9800
+    },
+    {
+      "id": 5,
+      "title": "Take Five",
+      "artist": "Dave Brubeck",
+      "duration": 324,
+      "genre": "Jazz",
+      "plays": 3100
+    },
+    {
+      "id": 6,
+      "title": "So What",
+      "artist": "Miles Davis",
+      "duration": 565,
+      "genre": "Jazz",
+      "plays": 2400
+    },
+    {
+      "id": 7,
+      "title": "Strobe",
+      "artist": "deadmau5",
+      "duration": 602,
+      "genre": "Electronic",
+      "plays": 5500
+    },
+    {
+      "id": 8,
+      "title": "One More Time",
+      "artist": "Daft Punk",
+      "duration": 320,
+      "genre": "Electronic",
+      "plays": 7100
+    },
+    {
+      "id": 9,
+      "title": "Nights",
+      "artist": "Frank Ocean",
+      "duration": 307,
+      "genre": "R&B",
+      "plays": 7300
+    },
+    {
+      "id": 10,
+      "title": "Redbone",
+      "artist": "Childish Gambino",
+      "duration": 326,
+      "genre": "R&B",
+      "plays": 4900
+    },
+    {
+      "title": "teste",
+      "artist": "sdifjsdpifj",
+      "genre": "cenas",
+      "duration": 1232,
+      "plays": 0,
+      "id": 11
+    },
+    {
+      "title": "teste",
+      "artist": "sdifjsdpifj",
+      "genre": "cenas",
+      "duration": 1232,
+      "plays": 0,
+      "id": 12
+    },
+    {
+      "title": "sdsdf",
+      "artist": "sdfsdf",
+      "genre": "sdfsdf",
+      "duration": 12312312,
+      "plays": 0,
+      "id": 13
+    },
+    {
+      "title": "sdfsdf",
+      "artist": "sdfdfss",
+      "genre": "sdfsdffsd",
+      "duration": 12312312,
+      "plays": 0,
+      "id": 14
+    },
+    {
+      "title": "111",
+      "artist": "11",
+      "genre": "dwsd",
+      "duration": 12,
+      "plays": 0,
+      "id": 15
+    }
+  ]
+}
